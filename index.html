@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>La Playa Club & Na Areia Bar | Esportes de Areia, Gastronomia e Sunset em Matão - SP</title>
+  <meta name="description" content="O melhor complexo de esportes de areia e gastronomia pé na areia de Matão - SP. Beach Tennis, Futevôlei, Vôlei de Praia, drinks autorais, chope trincando e música ao vivo.">
+  <meta name="keywords" content="La Playa Club, Na Areia Bar, Beach Tennis Matão, Futevôlei Matão, Vôlei de Praia Matão, Bar em Matão, Quadras de Areia Matão, Sunset Matão">
+  <meta name="author" content="La Playa Club LTDA">
+  
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://laplayaclub.com.br/">
+  <meta property="og:title" content="La Playa Club & Na Areia Bar - Matão / SP">
+  <meta property="og:description" content="Sua experiência pé na areia em Matão! Quadras de areia profissionais, aulas, locações, gastronomia artesanal, chope gelado e os melhores sunsets.">
+  <meta property="og:image" content="assets/img/hero-bg.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- 1. HEADER / NAVEGAÇÃO                        -->
+  <!-- ============================================ -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="#inicio" class="brand-logo" id="brand-logo-link">
+        <div class="logo-icon">
+          <i class="fa-solid fa-umbrella-beach"></i>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">LA PLAYA CLUB</span>
+          <span class="logo-subtitle"><i class="fa-solid fa-cocktail"></i> NA AREIA BAR</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#inicio" class="nav-link active">Início</a></li>
+          <li class="nav-item"><a href="#arena" class="nav-link">A Arena & Esportes</a></li>
+          <li class="nav-item"><a href="#bar" class="nav-link">Na Areia Bar</a></li>
+          <li class="nav-item"><a href="#programacao" class="nav-link">Programação</a></li>
+          <li class="nav-item"><a href="#localizacao" class="nav-link">Localização</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-primary btn-header" id="btn-header-cta" onclick="openReservationModal('Geral')">
+          <i class="fa-brands fa-whatsapp"></i> Agendar Aula / Quadra
+        </button>
+
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <div class="logo-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
+        <div class="logo-text">
+          <span class="logo-title">LA PLAYA CLUB</span>
+          <span class="logo-subtitle">NA AREIA BAR</span>
+        </div>
+      </div>
+      <button class="drawer-close" id="drawer-close" aria-label="Fechar Menu">&times;</button>
+    </div>
+    <ul class="drawer-list">
+      <li><a href="#inicio" class="drawer-link"><i class="fa-solid fa-house"></i> Início</a></li>
+      <li><a href="#arena" class="drawer-link"><i class="fa-solid fa-volleyball"></i> A Arena & Esportes</a></li>
+      <li><a href="#bar" class="drawer-link"><i class="fa-solid fa-martini-glass-citrus"></i> Na Areia Bar</a></li>
+      <li><a href="#programacao" class="drawer-link"><i class="fa-solid fa-calendar-days"></i> Programação & Sunsets</a></li>
+      <li><a href="#localizacao" class="drawer-link"><i class="fa-solid fa-location-dot"></i> Localização & Contato</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <button class="btn btn-primary btn-full" onclick="openReservationModal('Geral'); closeDrawer();">
+        <i class="fa-brands fa-whatsapp"></i> Agendar pelo WhatsApp
+      </button>
+      <div class="drawer-socials">
+        <a href="https://instagram.com/laplaya_club" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> @laplaya_club</a>
+        <a href="https://instagram.com/_naareiabar" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> @_naareiabar</a>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+
+  <!-- ============================================ -->
+  <!-- 2. HERO SECTION                              -->
+  <!-- ============================================ -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg-overlay"></div>
+    <!-- Visual background wrapper with gradient & styled placeholder image -->
+    <div class="hero-img-wrapper">
+      <img src="assets/img/hero-bg.jpg" alt="La Playa Club Arena e Sunset" class="hero-img" onerror="this.classList.add('img-fallback')">
+    </div>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge-top">
+          <span class="pulse-dot"></span> Complexo Pé na Areia em Matão - SP
+        </div>
+
+        <h1 class="hero-title">
+          Sua Experiência <span class="gradient-text-sand">Pé na Areia</span> em Matão
+        </h1>
+
+        <p class="hero-subtitle">
+          O ponto de encontro perfeito que une <strong>esportes de areia</strong>, o gastronômico <strong>Na Areia Bar</strong>, drinks autorais trincando e os melhores sunsets da cidade.
+        </p>
+
+        <div class="hero-cta-group">
+          <button class="btn btn-solar btn-large" onclick="openReservationModal('Geral')">
+            <i class="fa-solid fa-calendar-check"></i> Reservar Quadra / Aulas
+          </button>
+          <a href="#bar" class="btn btn-outline-glass btn-large">
+            <i class="fa-solid fa-utensils"></i> Conhecer o Na Areia Bar
+          </a>
+        </div>
+
+        <div class="hero-badges-grid">
+          <div class="hero-badge-pill">
+            <span class="badge-icon">🎾</span>
+            <span class="badge-text">Quadras de Areias</span>
+          </div>
+          <div class="hero-badge-pill">
+            <span class="badge-icon">🍹</span>
+            <span class="badge-text">Drinks Autorais & Cerveja Gelada</span>
+          </div>
+          <div class="hero-badge-pill">
+            <span class="badge-icon">🎶</span>
+            <span class="badge-text">Música ao Vivo & Sunsets</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Bar -->
+      <div class="hero-stats-card">
+        <div class="stat-item">
+          <span class="stat-num">4</span>
+          <span class="stat-label">Quadras Oficiais</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Modalidades</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Vibe Beach Club</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item stat-location">
+          <i class="fa-solid fa-map-pin"></i>
+          <span>Matão - SP</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================ -->
+  <!-- 3. SEÇÃO ARENA & ESPORTES (LA PLAYA CLUB)    -->
+  <!-- ============================================ -->
+  <section class="section arena-section" id="arena">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag"><i class="fa-solid fa-trophy"></i> LA PLAYA CLUB</span>
+        <h2 class="section-title">A Arena & Esportes de Areia</h2>
+        <p class="section-subtitle">
+          Evolua no esporte, jogue com amigos e sinta a energia da areia de alta qualidade com infraestrutura completa e iluminação noturna profissional.
+        </p>
+      </div>
+
+      <!-- Sports Modal Tabs Switcher -->
+      <div class="sports-tabs-wrapper">
+        <div class="sports-tabs-header">
+          <button class="tab-btn active" data-tab="tab-beachtennis">
+            <i class="fa-solid fa-table-tennis-paddle-ball"></i> Beach Tennis
+          </button>
+          <button class="tab-btn" data-tab="tab-futevolei">
+            <i class="fa-solid fa-soccer-ball"></i> Futevôlei
+          </button>
+          <button class="tab-btn" data-tab="tab-voleipraia">
+            <i class="fa-solid fa-volleyball"></i> Vôlei de Praia
+          </button>
+        </div>
+
+        <div class="sports-tabs-content">
+          <!-- Tab 1: Beach Tennis -->
+          <div class="tab-pane active" id="tab-beachtennis">
+            <div class="tab-grid">
+              <div class="tab-info">
+                <span class="tab-badge">Locação & Day Use</span>
+                <h3>Beach Tennis</h3>
+                <p>
+                  O esporte que é a cara do verão! Reúna seus amigos para partidas dinâmicas e divertidas em quadras com areia tratada e estrutura completa.
+                </p>
+                <ul class="tab-checklist">
+                  <li><i class="fa-solid fa-circle-check"></i> Locação avulsa por hora para você e seu grupo jogar.</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Opção de Day Use para curtir a estrutura o dia todo.</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Quadras iluminadas para partidas diurnas e noturnas.</li>
+                </ul>
+                <button class="btn btn-primary" onclick="openReservationModal('Beach Tennis')">
+                  <i class="fa-brands fa-whatsapp"></i> Reservar Quadra ou Day Use (Beach Tennis)
+                </button>
+              </div>
+              <div class="tab-image-box">
+                <img src="assets/img/beach-tennis.jpg" alt="Quadra de Beach Tennis La Playa Club" class="tab-img" onerror="this.classList.add('img-fallback-sport')">
+                <div class="img-overlay-card">
+                  <i class="fa-solid fa-clock"></i> Locação Avulsa & Day Use
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: Futevôlei -->
+          <div class="tab-pane" id="tab-futevolei">
+            <div class="tab-grid">
+              <div class="tab-info">
+                <span class="tab-badge">Aulas Exclusivas & Locação</span>
+                <h3>Futevôlei</h3>
+                <p>
+                  A essência do esporte brasileiro na areia! Oferecemos <strong>Aulas Exclusivas com professores qualificados</strong> para todos os níveis, além de locação avulsa de quadras e Day Use.
+                </p>
+                <ul class="tab-checklist">
+                  <li><i class="fa-solid fa-circle-check"></i> <strong>Aulas com Professores</strong> (Do iniciante ao avançado).</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Treinos de passe, recepção, ataque e condicionamento físico.</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Locação avulsa de quadras e Day Use com a galera.</li>
+                </ul>
+                <button class="btn btn-primary" onclick="openReservationModal('Futevôlei')">
+                  <i class="fa-brands fa-whatsapp"></i> Agendar Aula Experimental de Futevôlei
+                </button>
+              </div>
+              <div class="tab-image-box">
+                <img src="assets/img/futevolei.jpg" alt="Futevôlei na Areia La Playa Club" class="tab-img" onerror="this.classList.add('img-fallback-sport')">
+                <div class="img-overlay-card">
+                  <i class="fa-solid fa-fire"></i> Aulas Diárias + Locação
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: Vôlei de Praia -->
+          <div class="tab-pane" id="tab-voleipraia">
+            <div class="tab-grid">
+              <div class="tab-info">
+                <span class="tab-badge">Locação & Day Use</span>
+                <h3>Vôlei de Praia</h3>
+                <p>
+                  Saque, levantamento e ataques no sol ou sob os refletores noturnos! O clássico vôlei de praia para duplas ou quartetos com rede ajustável.
+                </p>
+                <ul class="tab-checklist">
+                  <li><i class="fa-solid fa-circle-check"></i> Locação avulsa de quadras oficiais por hora.</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Day Use para juntar a turma e jogar o dia inteiro.</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Iluminação noturna de alta precisão.</li>
+                </ul>
+                <button class="btn btn-primary" onclick="openReservationModal('Vôlei de Praia')">
+                  <i class="fa-brands fa-whatsapp"></i> Reservar Quadra ou Day Use (Vôlei de Praia)
+                </button>
+              </div>
+              <div class="tab-image-box">
+                <img src="assets/img/volei-praia.jpg" alt="Vôlei de Praia La Playa Club" class="tab-img" onerror="this.classList.add('img-fallback-sport')">
+                <div class="img-overlay-card">
+                  <i class="fa-solid fa-sun"></i> Locação Avulsa & Day Use
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Informative Feature Cards -->
+      <div class="arena-cards-grid">
+        <div class="arena-card">
+          <div class="arena-card-icon">
+            <i class="fa-solid fa-user-graduate"></i>
+          </div>
+          <h3>Aulas de Futevôlei</h3>
+          <p>Professores dedicados para te orientar desde os primeiros toques na bola até técnicas avançadas de jogo.</p>
+          <a href="javascript:void(0)" onclick="openReservationModal('Futevôlei')" class="card-link">Agendar Aula Experimental de Futevôlei <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="arena-card">
+          <div class="arena-card-icon">
+            <i class="fa-solid fa-clock"></i>
+          </div>
+          <h3>Locação Avulsa de Quadras</h3>
+          <p>Monte o seu jogo de Beach Tennis, Futevôlei ou Vôlei de Praia. Reserve com rapidez no WhatsApp.</p>
+          <a href="javascript:void(0)" onclick="openReservationModal('Locação Avulsa')" class="card-link">Consultar Horários Disponíveis <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="arena-card">
+          <div class="arena-card-icon">
+            <i class="fa-solid fa-umbrella-beach"></i>
+          </div>
+          <h3>Day Use</h3>
+          <p>Passe o dia no clube jogando com os amigos, aproveitando a estrutura de areia e o gastronômico Na Areia Bar.</p>
+          <a href="javascript:void(0)" onclick="openReservationModal('Day Use')" class="card-link">Saber mais sobre Day Use <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Banner CTA Reception -->
+      <div class="reception-banner">
+        <div class="reception-content">
+          <h3>Quer aprender Futevôlei ou Reservar uma Quadra?</h3>
+          <p>Fale com nossa recepção para agendar sua <strong>Aula Experimental de Futevôlei</strong> ou garanta o horário da sua quadra!</p>
+        </div>
+        <button class="btn btn-solar btn-large" onclick="openReservationModal('Futevôlei')">
+          <i class="fa-brands fa-whatsapp"></i> Falar com a Recepção Agora
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================ -->
+  <!-- 4. SEÇÃO GASTRONOMIA & BAR (NA AREIA BAR)   -->
+  <!-- ============================================ -->
+  <section class="section bar-section" id="bar">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag section-tag-bar"><i class="fa-solid fa-champagne-glasses"></i> @_NAAREIABAR</span>
+        <h2 class="section-title">Na Areia Bar - Gastronomia & Coquetelaria</h2>
+        <p class="section-subtitle">
+          Após o treino ou para curtir o fim de tarde com estilo. Drinks autorais refrescantes, chope trincando de gelado e porções gourmet artesanais.
+        </p>
+      </div>
+
+      <!-- Experience Highlights -->
+      <div class="bar-features-grid">
+        <div class="bar-feature-card">
+          <div class="bar-icon"><i class="fa-solid fa-cocktail"></i></div>
+          <h4>Drinks Autorais & Tropicais</h4>
+          <p>Coquetelaria artesanal com frutas selecionadas, gin tônicas aromáticas, caipirinhas exclusivas e drinks autorais.</p>
+        </div>
+
+        <div class="bar-feature-card">
+          <div class="bar-icon"><i class="fa-solid fa-beer-mug-empty"></i></div>
+          <h4>Chope Trincando & Cervejas</h4>
+          <p>Chope servido na caneca estalando de gelada e rótulos de cerveja bem congelados para matar a sede do calor de Matão.</p>
+        </div>
+
+        <div class="bar-feature-card">
+          <div class="bar-icon"><i class="fa-solid fa-burger"></i></div>
+          <h4>Porções & Petiscos Gourmet</h4>
+          <p>Cardápio variado de petiscos gourmet, iscas de peixe crocantes, dadinhos de tapioca, filés e porções de praia artesanais.</p>
+        </div>
+
+        <div class="bar-feature-card">
+          <div class="bar-icon"><i class="fa-solid fa-sun"></i></div>
+          <h4>Ambiente Lounge Pé na Areia</h4>
+          <p>Mesas e lounges com sombreiros, iluminação acolhedora e o clima descontraído dos melhores beach clubs do litoral.</p>
+        </div>
+      </div>
+
+      <!-- Gallery Showcase Filterable Grid -->
+      <div class="gallery-wrapper">
+        <div class="gallery-filter-buttons">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="drinks">Drinks Autorais</button>
+          <button class="filter-btn" data-filter="chope">Chope & Cervejas</button>
+          <button class="filter-btn" data-filter="pratos">Porções Gourmet</button>
+          <button class="filter-btn" data-filter="vibe">Ambiente Bar</button>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Item 1: Drink -->
+          <div class="gallery-card" data-category="drinks">
+            <div class="gallery-img-box">
+              <img src="assets/img/bar-drink-1.jpg" alt="Drink Autoral Na Areia Bar" class="gallery-img" onerror="this.classList.add('img-fallback-bar')">
+              <div class="gallery-overlay">
+                <span class="gallery-category"><i class="fa-solid fa-martini-glass"></i> Drinks Autorais</span>
+                <h5>Coquetelaria Tropical</h5>
+                <p>Sabores refrescantes com frutas da estação</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Chope -->
+          <div class="gallery-card" data-category="chope">
+            <div class="gallery-img-box">
+              <img src="assets/img/bar-chope-1.jpg" alt="Chope Trincando Na Areia Bar" class="gallery-img" onerror="this.classList.add('img-fallback-bar')">
+              <div class="gallery-overlay">
+                <span class="gallery-category"><i class="fa-solid fa-beer-mug-empty"></i> Chope Gelado</span>
+                <h5>Chope Trincando</h5>
+                <p>Servido na caneca congelada</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Porções -->
+          <div class="gallery-card" data-category="pratos">
+            <div class="gallery-img-box">
+              <img src="assets/img/bar-food-1.jpg" alt="Porção Gourmet Na Areia Bar" class="gallery-img" onerror="this.classList.add('img-fallback-bar')">
+              <div class="gallery-overlay">
+                <span class="gallery-category"><i class="fa-solid fa-utensils"></i> Petiscos</span>
+                <h5>Porção Gourmet Pé na Areia</h5>
+                <p>Petiscos artesanais para compartilhar</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Vibe -->
+          <div class="gallery-card" data-category="vibe">
+            <div class="gallery-img-box">
+              <img src="assets/img/bar-lounge-1.jpg" alt="Ambiente Na Areia Bar Lounge" class="gallery-img" onerror="this.classList.add('img-fallback-bar')">
+              <div class="gallery-overlay">
+                <span class="gallery-category"><i class="fa-solid fa-umbrella-beach"></i> Lounge</span>
+                <h5>Vibe Beach Club</h5>
+                <p>Conforto e descontração pé na areia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bar-cta-center">
+          <button class="btn btn-sand btn-large" onclick="openMenuModal()">
+            <i class="fa-solid fa-book-open"></i> Ver Destaques do Cardápio Digital
+          </button>
+          <a href="https://instagram.com/_naareiabar" target="_blank" rel="noopener" class="btn btn-outline-light btn-large">
+            <i class="fa-brands fa-instagram"></i> Siga @_naareiabar no Instagram
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================ -->
+  <!-- 5. PROGRAMAÇÃO & EVENTOS                     -->
+  <!-- ============================================ -->
+  <section class="section events-section" id="programacao">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag"><i class="fa-solid fa-calendar-star"></i> EXPERIÊNCIA COMPLETA</span>
+        <h2 class="section-title">Programação, Sunsets & Eventos</h2>
+        <p class="section-subtitle">
+          Sempre há um ótimo motivo para reunir os amigos no La Playa Club & Na Areia Bar.
+        </p>
+      </div>
+
+      <div class="events-grid">
+        <!-- Card Agenda Semanal Dinâmica nas Redes Sociais -->
+        <div class="events-main-card">
+          <div class="events-card-header">
+            <h3><i class="fa-solid fa-fire"></i> Programação & Sunsets da Semana</h3>
+            <span class="badge-accent">Atualizado no Instagram</span>
+          </div>
+
+          <div class="social-agenda-body">
+            <div class="agenda-icon-box">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <h4>Confira a Programação Desta Semana no Nosso Instagram!</h4>
+            <p>
+              Toda semana preparamos uma agenda especial com <strong>música ao vivo no sunset, transmissões de jogos, happy hours e horários de torneios</strong> no La Playa Club e no Na Areia Bar.
+            </p>
+            <p class="agenda-subnote">
+              Como nossa programação de atrações muda semanalmente, acompanhe os stories e publicações em tempo real!
+            </p>
+
+            <div class="agenda-social-btns">
+              <a href="https://instagram.com/laplaya_club" target="_blank" rel="noopener" class="btn btn-primary">
+                <i class="fa-brands fa-instagram"></i> Ver Agenda no @laplaya_club
+              </a>
+              <a href="https://instagram.com/_naareiabar" target="_blank" rel="noopener" class="btn btn-solar">
+                <i class="fa-brands fa-instagram"></i> Ver Atração no @_naareiabar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Festas e Eventos Privados -->
+        <div class="private-events-card">
+          <div class="private-events-badge">Espaço Exclusivo</div>
+          <h3>Reserve nosso Espaço para seu Evento Privado</h3>
+          <p>
+            Aniversários, confraternizações de empresas, formaturas ou torneios fechados. Transforme seu evento em uma experiência pé na areia inesquecível em Matão!
+          </p>
+
+          <ul class="private-specs-list">
+            <li><i class="fa-solid fa-check"></i> Quadras reservadas exclusivamente para seu grupo</li>
+            <li><i class="fa-solid fa-check"></i> Cardápio e buffet personalizado pelo Na Areia Bar</li>
+            <li><i class="fa-solid fa-check"></i> Estrutura de som, iluminação e loungess confortáveis</li>
+            <li><i class="fa-solid fa-check"></i> Atendimento com garçons e suporte de recepção</li>
+          </ul>
+
+          <button class="btn btn-solar btn-full" onclick="openEventModal()">
+            <i class="fa-solid fa-champagne-glasses"></i> Solicitar Orçamento de Evento
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================ -->
+  <!-- 6. LOCALIZAÇÃO E CONTATO (RODAPÉ INTEGRADO)  -->
+  <!-- ============================================ -->
+  <section class="section location-section" id="localizacao">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag"><i class="fa-solid fa-map-location-dot"></i> VENHA NOS VISITAR</span>
+        <h2 class="section-title">Localização & Horários de Funcionamento</h2>
+        <p class="section-subtitle">
+          Estamos situados em uma localização privilegiada e de fácil acesso em Matão - SP.
+        </p>
+      </div>
+
+      <div class="location-grid">
+        <!-- Info Box -->
+        <div class="location-info-card">
+          <div class="info-block">
+            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="info-text">
+              <h4>Endereço Completo</h4>
+              <p>Av. Baldan, 3050 - Residencial das Acácias<br>Matão - SP | CEP 15990-536</p>
+              <a href="https://maps.google.com/?q=Av.+Baldan,+3050+-+Residencial+das+Ac%C3%A1cias,+Mat%C3%A3o+-+SP" target="_blank" rel="noopener" class="maps-link">
+                <i class="fa-solid fa-diamond-turn-right"></i> Abrir no Google Maps
+              </a>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="info-text">
+              <h4>Horários de Funcionamento</h4>
+              <div class="hours-subgrid">
+                <div class="hour-item">
+                  <strong>🎾 Arena / Aulas / Quadras:</strong>
+                  <span>Segunda a Sexta: 07h às 22h30</span>
+                  <span>Sábados e Domingos: 07h às 20h</span>
+                </div>
+                <div class="hour-item">
+                  <strong>🍹 Na Areia Bar:</strong>
+                  <span>Quarta a Sexta: 17h às 23h30</span>
+                  <span>Sábado: 11h às 00h | Domingo: 11h às 21h</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-icon"><i class="fa-solid fa-hashtag"></i></div>
+            <div class="info-text">
+              <h4>Nossas Redes Sociais</h4>
+              <div class="social-links-btns">
+                <a href="https://instagram.com/laplaya_club" target="_blank" rel="noopener" class="social-btn">
+                  <i class="fa-brands fa-instagram"></i> @laplaya_club <small>(Esportes)</small>
+                </a>
+                <a href="https://instagram.com/_naareiabar" target="_blank" rel="noopener" class="social-btn social-btn-bar">
+                  <i class="fa-brands fa-instagram"></i> @_naareiabar <small>(Bar & Gastronomia)</small>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Map Container -->
+        <div class="location-map-card">
+          <div class="map-wrapper">
+            <iframe 
+              title="Mapa de Localização La Playa Club" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.8753232822837!2d-48.371239!3d-21.606789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8e19c0b1f1f1f%3A0x0!2zQXYuIEJhbGRhbiwgMzA1MCAtIFJlc2lkZW5jaWFsIGRhcyBBY8OhY2lhcywgTWF0w6NvIC0gU1AsIDE1OTkwLTUzNg!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================ -->
+  <!-- FOOTER PRINCIPAL                             -->
+  <!-- ============================================ -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="logo-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
+            <div class="logo-text">
+              <span class="logo-title">LA PLAYA CLUB</span>
+              <span class="logo-subtitle">NA AREIA BAR</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Seu complexo esportivo e gastronômico pé na areia em Matão - SP. Aulas, locações de quadras, drinks autorais, chope trincando e os melhores sunsets.
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Navegação</h5>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#arena">A Arena & Esportes</a></li>
+            <li><a href="#bar">Na Areia Bar</a></li>
+            <li><a href="#programacao">Programação & Sunsets</a></li>
+            <li><a href="#localizacao">Localização</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Esportes</h5>
+          <ul>
+            <li><a href="javascript:void(0)" onclick="openReservationModal('Beach Tennis')">Beach Tennis</a></li>
+            <li><a href="javascript:void(0)" onclick="openReservationModal('Futevôlei')">Futevôlei</a></li>
+            <li><a href="javascript:void(0)" onclick="openReservationModal('Vôlei de Praia')">Vôlei de Praia</a></li>
+            <li><a href="javascript:void(0)" onclick="openReservationModal('Aula Experimental')">Aula Experimental</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Contato Rápido</h5>
+          <p><i class="fa-solid fa-location-dot"></i> Av. Baldan, 3050 - Matão/SP</p>
+          <p><i class="fa-brands fa-whatsapp"></i> Atendimento via WhatsApp</p>
+          <div class="footer-social-row">
+            <a href="https://instagram.com/laplaya_club" target="_blank" aria-label="Instagram La Playa Club"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://instagram.com/_naareiabar" target="_blank" aria-label="Instagram Na Areia Bar"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-legal">
+          <span>&copy; <span id="current-year">2026</span> La Playa Club & Na Areia Bar. Todos os direitos reservados.</span>
+          <span class="footer-cnpj">CNPJ: 47.479.182/0001-99 | La Playa Club LTDA</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================ -->
+  <!-- FLOATING ELEMENTS (WHATSAPP & BACK TO TOP)  -->
+  <!-- ============================================ -->
+  <!-- Floating WhatsApp Widget -->
+  <div class="whatsapp-floating-wrapper" id="whatsapp-floating">
+    <div class="whatsapp-popover" id="whatsapp-popover">
+      <div class="popover-header">
+        <div class="popover-avatar">
+          <i class="fa-solid fa-umbrella-beach"></i>
+        </div>
+        <div class="popover-info">
+          <strong>La Playa Club Recepção</strong>
+          <small><span class="online-dot"></span> Online agora</small>
+        </div>
+        <button class="popover-close" onclick="toggleWhatsAppPopover()">&times;</button>
+      </div>
+      <div class="popover-body">
+        <p>Olá! 👋 Como podemos te ajudar hoje pé na areia?</p>
+        <div class="popover-options">
+          <button onclick="selectWhatsAppOption('Aula Experimental')">🎾 Agendar Aula Experimental</button>
+          <button onclick="selectWhatsAppOption('Locação de Quadra')">⏳ Reservar Horário de Quadra</button>
+          <button onclick="selectWhatsAppOption('Reserva no Bar')">🍹 Reservar Mesa / Na Areia Bar</button>
+          <button onclick="selectWhatsAppOption('Evento Privado')">🎂 Eventos e Festas Privadas</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="whatsapp-btn" onclick="toggleWhatsAppPopover()" aria-label="Contato via WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="whatsapp-ping"></span>
+    </button>
+  </div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" onclick="scrollToTop()" aria-label="Voltar ao Topo">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+
+  <!-- ============================================ -->
+  <!-- INTERACTIVE MODALS                           -->
+  <!-- ============================================ -->
+
+  <!-- 1. Modal de Agendamento Geral / Quadra & Aulas -->
+  <div class="modal-backdrop" id="modal-reservation">
+    <div class="modal-container">
+      <button class="modal-close" onclick="closeModal('modal-reservation')">&times;</button>
+      <div class="modal-header text-center">
+        <div class="modal-icon-badge"><i class="fa-brands fa-whatsapp"></i></div>
+        <h3 id="modal-res-title">Agendar no La Playa Club</h3>
+        <p>Escolha os detalhes abaixo para ser direcionado diretamente ao WhatsApp da nossa recepção!</p>
+      </div>
+      <form id="reservation-form" onsubmit="submitReservationForm(event)">
+        <div class="form-group">
+          <label for="res-sport">Modalidade ou Serviço</label>
+          <select id="res-sport" class="form-control" required>
+            <option value="Beach Tennis">Beach Tennis</option>
+            <option value="Futevôlei">Futevôlei</option>
+            <option value="Vôlei de Praia">Vôlei de Praia</option>
+            <option value="Locação Avulsa">Locação Avulsa de Quadra</option>
+            <option value="Reserva de Mesa no Bar">Reserva no Na Areia Bar</option>
+            <option value="Outro assunto">Outro assunto</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="res-type">Tipo de Solicitação</label>
+          <select id="res-type" class="form-control" required>
+            <option value="Aula Experimental Gratuita">Aula Experimental Gratuita</option>
+            <option value="Locação de Horário de Quadra">Locação de Horário</option>
+            <option value="Informações sobre Planos e Mensalidades">Mensalidade & Turmas</option>
+            <option value="Dúvidas Gerais">Dúvidas Gerais</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="res-name">Seu Nome (Opcional)</label>
+          <input type="text" id="res-name" class="form-control" placeholder="Ex: João Silva">
+        </div>
+
+        <button type="submit" class="btn btn-solar btn-full">
+          <i class="fa-brands fa-whatsapp"></i> Abrir WhatsApp com Mensagem
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- 2. Modal do Cardápio Digital (Na Areia Bar) -->
+  <div class="modal-backdrop" id="modal-menu">
+    <div class="modal-container modal-large">
+      <button class="modal-close" onclick="closeModal('modal-menu')">&times;</button>
+      <div class="modal-header text-center">
+        <span class="modal-tag">@_NAAREIABAR</span>
+        <h3>Destaques do Cardápio Na Areia Bar</h3>
+        <p>Confira algumas das nossas especialidades de bar e coquetelaria</p>
+      </div>
+
+      <div class="menu-tabs">
+        <button class="menu-tab-btn active" data-menutab="menu-drinks">Drinks Tropicais</button>
+        <button class="menu-tab-btn" data-menutab="menu-chopes">Chopes & Cervejas</button>
+        <button class="menu-tab-btn" data-menutab="menu-porcoes">Porções Gourmet</button>
+      </div>
+
+      <div class="menu-tab-content">
+        <!-- Menu Drinks -->
+        <div class="menu-pane active" id="menu-drinks">
+          <div class="menu-items-grid">
+            <div class="menu-item-card">
+              <div class="menu-item-info">
+                <h5>La Playa Sunset <span class="badge-star">Autoral</span></h5>
+                <p>Gin artesanal, xarope de maracujá, lâminas de morango, tônica e espuma de gengibre refrescante.</p>
+              </div>
+            </div>
+            <div class="menu-item-card">
+              <div class="menu-item-info">
+                <h5>Caipirinha Tropical de Kiwi & Caju</h5>
+                <p>Cachaça premium ou vodka, kiwi fresco macerado, caju e toque de melado de cana.</p>
+              </div>
+            </div>
+            <div class="menu-item-card">
+              <div class="menu-item-info">
+                <h5>Mojito Pé na Areia</h5>
+                <p>Rum branco, hortelã fresca da horta, suco de limão siciliano e água com gás trincando.</p>
+              </div>
+            </div>
+            <div class="menu-item-card">
+              <div class="menu-item-info">
+                <h5>Gin Tônica Red Fruit</h5>
+                <p>Gin, infusão de frutas vermelhas, especiarias e água tônica premium.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Chopes -->
+        <div class="menu-pane" id="menu-chopes">
+          <div class="menu-items-grid">
+            <div class="menu-item-card">
+              <div class="menu-item-info">
+                <h5>Chope Pilsen Trincando (Caneca Zero Graus) <span class="badge-star">Favorito</span></h5>
+                <p>Chope puro malte levinho e cremoso, servido no copo trincando de congelado.</p>
+              </div>
+            </div>
+            <div class="menu-item-card">
+              <div class="menu-item-info">
+                <h5>Chope IPA Artesanal</h5>
+                <p>Notas cítricas e amargor equilibrado para quem aprecia cervejas de caráter.</p>
+              </div>
+            </div>
+            <div class="menu-item-card">
+              <div class="menu-item-info">
+                <h5>Cervejas Long Neck & Estupidamente Geladas</h5>
+                <p>Balde de Heineken, Corona, Budweiser e Spaten bem trincando.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Porções -->
+        <div class="menu-pane" id="menu-porcoes">
+          <div class="menu-items-grid">
+            <div class="menu-item-card">
+              <div class="menu-item-info">
+                <h5>Dadinhos de Tapioca com Geléia de Pimenta <span class="badge-star">Mais Pedido</span></h5>
+                <p>Crocantes por fora, cremosos por dentro com queijo coalho e acompanhados de geleia artesanal.</p>
+              </div>
+            </div>
+            <div class="menu-item-card">
+              <div class="menu-item-info">
+                <h5>Filé Mignon ao Molho de Catupiry Artesanal</h5>
+                <p>Tiras de filé mignon grelhadas na chapa com catupiry gratinado e torradas temperadas.</p>
+              </div>
+            </div>
+            <div class="menu-item-card">
+              <div class="menu-item-info">
+                <h5>Iscas de Peixe Crocantes ao Molho Tártaro</h5>
+                <p>Tilápia empanada na farinha panko, limão siciliano e molho tártaro da casa.</p>
+              </div>
+            </div>
+            <div class="menu-item-card">
+              <div class="menu-item-info">
+                <h5>Batata Rústica da Casa com Bacon & Cheddar</h5>
+                <p>Batatas rústicas temperadas com alecrim, cobertas de cheddar cremoso e crispy de bacon.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer text-center">
+        <button class="btn btn-solar" onclick="openReservationModal('Reserva no Bar')">
+          <i class="fa-brands fa-whatsapp"></i> Reservar Mesa no WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 3. Modal de Eventos Privados -->
+  <div class="modal-backdrop" id="modal-events">
+    <div class="modal-container">
+      <button class="modal-close" onclick="closeModal('modal-events')">&times;</button>
+      <div class="modal-header text-center">
+        <div class="modal-icon-badge"><i class="fa-solid fa-party-horn"></i></div>
+        <h3>Solicitar Orçamento para Evento</h3>
+        <p>Organize seu aniversário, confraternização de empresa ou torneio privado conosco!</p>
+      </div>
+      <form id="events-form" onsubmit="submitEventsForm(event)">
+        <div class="form-group">
+          <label for="evt-type">Tipo de Evento</label>
+          <select id="evt-type" class="form-control" required>
+            <option value="Aniversário">Aniversário / Festa Privada</option>
+            <option value="Confraternização de Empresa">Confraternização de Empresa</option>
+            <option value="Torneio Fechado">Torneio Fechado de Amigos</option>
+            <option value="Outro Evento">Outro Tipo de Evento</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="evt-people">Estimativa de Pessoas</label>
+          <select id="evt-people" class="form-control" required>
+            <option value="Até 20 pessoas">Até 20 pessoas</option>
+            <option value="20 a 50 pessoas">20 a 50 pessoas</option>
+            <option value="Mais de 50 pessoas">Mais de 50 pessoas</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="evt-name">Seu Nome / Empresa</label>
+          <input type="text" id="evt-name" class="form-control" placeholder="Seu nome ou nome da empresa" required>
+        </div>
+
+        <button type="submit" class="btn btn-solar btn-full">
+          <i class="fa-brands fa-whatsapp"></i> Enviar Solicitação no WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- JavaScript bundle -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>
