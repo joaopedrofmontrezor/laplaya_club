@@ -1,10 +1,5 @@
-/* ==========================================================================
-   LA PLAYA CLUB & NA AREIA BAR - MAIN JAVASCRIPT LOGIC
-   Location: Matão - SP
-   ========================================================================== */
 
-// WhatsApp Reception Phone Number (Matão - SP)
-const WHATSAPP_PHONE = '5516997000000'; // Default phone number format for La Playa Club
+const WHATSAPP_PHONE = '5516999641866';
 
 document.addEventListener('DOMContentLoaded', () => {
   initHeaderScroll();
@@ -18,9 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-/* --------------------------------------------------------------------------
-   1. HEADER SCROLL & NAVBAR BEHAVIOR
-   -------------------------------------------------------------------------- */
 function initHeaderScroll() {
   const header = document.getElementById('header');
   if (!header) return;
@@ -37,9 +29,7 @@ function initHeaderScroll() {
 }
 
 
-/* --------------------------------------------------------------------------
-   2. MOBILE DRAWER MENU
-   -------------------------------------------------------------------------- */
+
 function initMobileDrawer() {
   const hamburgerBtn = document.getElementById('hamburger-btn');
   const drawerCloseBtn = document.getElementById('drawer-close');
@@ -73,9 +63,7 @@ function initMobileDrawer() {
 }
 
 
-/* --------------------------------------------------------------------------
-   3. SPORTS TABS SWITCHER (ARENA SECTION)
-   -------------------------------------------------------------------------- */
+
 function initSportsTabs() {
   const tabButtons = document.querySelectorAll('.sports-tabs-header .tab-btn');
   const tabPanes = document.querySelectorAll('.sports-tabs-content .tab-pane');
@@ -86,11 +74,11 @@ function initSportsTabs() {
     btn.addEventListener('click', () => {
       const targetTabId = btn.getAttribute('data-tab');
 
-      // Update Active Tab Button
+      
       tabButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      // Update Active Tab Pane
+      
       tabPanes.forEach(pane => {
         if (pane.id === targetTabId) {
           pane.classList.add('active');
@@ -103,9 +91,7 @@ function initSportsTabs() {
 }
 
 
-/* --------------------------------------------------------------------------
-   4. GALLERY SHOWCASE FILTER (NA AREIA BAR)
-   -------------------------------------------------------------------------- */
+
 function initGalleryFilter() {
   const filterBtns = document.querySelectorAll('.filter-btn');
   const galleryCards = document.querySelectorAll('.gallery-card');
@@ -116,11 +102,11 @@ function initGalleryFilter() {
     btn.addEventListener('click', () => {
       const filterValue = btn.getAttribute('data-filter');
 
-      // Active state on buttons
+      
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      // Filter gallery cards
+      
       galleryCards.forEach(card => {
         const category = card.getAttribute('data-category');
         if (filterValue === 'all' || category === filterValue) {
@@ -135,9 +121,7 @@ function initGalleryFilter() {
 }
 
 
-/* --------------------------------------------------------------------------
-   5. MENU TABS SWITCHER (MODAL CARDÁPIO)
-   -------------------------------------------------------------------------- */
+
 function initMenuTabs() {
   const menuTabBtns = document.querySelectorAll('.menu-tab-btn');
   const menuPanes = document.querySelectorAll('.menu-pane');
@@ -163,9 +147,7 @@ function initMenuTabs() {
 }
 
 
-/* --------------------------------------------------------------------------
-   6. SCROLL OBSERVER FOR ACTIVE NAV HIGHLIGHT
-   -------------------------------------------------------------------------- */
+
 function initScrollObserver() {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
@@ -195,9 +177,6 @@ function initScrollObserver() {
 }
 
 
-/* --------------------------------------------------------------------------
-   7. BACK TO TOP BUTTON
-   -------------------------------------------------------------------------- */
 function initBackToTop() {
   const backBtn = document.getElementById('back-to-top');
   if (!backBtn) return;
@@ -219,9 +198,6 @@ window.scrollToTop = function() {
 };
 
 
-/* --------------------------------------------------------------------------
-   8. DYNAMIC COPYRIGHT YEAR
-   -------------------------------------------------------------------------- */
 function initCurrentYear() {
   const yearElem = document.getElementById('current-year');
   if (yearElem) {
@@ -230,11 +206,7 @@ function initCurrentYear() {
 }
 
 
-/* --------------------------------------------------------------------------
-   9. MODALS SYSTEM & WHATSAPP INTEGRATION
-   -------------------------------------------------------------------------- */
 
-// Global helper to open reservation modal with pre-selected sport/service
 window.openReservationModal = function(sportName = 'Geral') {
   const modal = document.getElementById('modal-reservation');
   const selectSport = document.getElementById('res-sport');
@@ -262,7 +234,7 @@ window.openReservationModal = function(sportName = 'Geral') {
   document.body.style.overflow = 'hidden';
 };
 
-// Global helper to open Digital Menu modal
+
 window.openMenuModal = function() {
   const modal = document.getElementById('modal-menu');
   if (modal) {
@@ -271,7 +243,6 @@ window.openMenuModal = function() {
   }
 };
 
-// Global helper to open Events Inquiry modal
 window.openEventModal = function() {
   const modal = document.getElementById('modal-events');
   if (modal) {
@@ -280,7 +251,7 @@ window.openEventModal = function() {
   }
 };
 
-// Global helper to close any modal by ID
+
 window.closeModal = function(modalId) {
   const modal = document.getElementById(modalId);
   if (modal) {
@@ -289,7 +260,7 @@ window.closeModal = function(modalId) {
   }
 };
 
-// Close modal when clicking on backdrop area
+
 document.querySelectorAll('.modal-backdrop').forEach(backdrop => {
   backdrop.addEventListener('click', (e) => {
     if (e.target === backdrop) {
@@ -299,7 +270,6 @@ document.querySelectorAll('.modal-backdrop').forEach(backdrop => {
   });
 });
 
-/* WhatsApp Dynamic Form Submitters */
 window.submitReservationForm = function(event) {
   event.preventDefault();
 
@@ -341,9 +311,7 @@ window.submitEventsForm = function(event) {
 };
 
 
-/* --------------------------------------------------------------------------
-   10. FLOATING WHATSAPP WIDGET POPOVER
-   -------------------------------------------------------------------------- */
+
 window.toggleWhatsAppPopover = function() {
   const popover = document.getElementById('whatsapp-popover');
   if (popover) {
