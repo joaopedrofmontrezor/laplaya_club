@@ -51,56 +51,9 @@ export function renderBar() {
             <button class="filter-btn" data-filter="vibe">Ambiente Bar</button>
           </div>
 
-          <div class="gallery-grid" id="gallery-grid">
-            <div class="gallery-card" data-category="drinks">
-              <div class="gallery-img-box">
-                <img src="assets/img/bar-drink-1.jpg" alt="Drink Autoral Na Areia Bar" class="gallery-img" onerror="this.classList.add('img-fallback-bar')">
-                <div class="gallery-overlay">
-                  <span class="gallery-category"><i class="fa-solid fa-martini-glass"></i> Drinks Autorais</span>
-                  <h5>Coquetelaria Tropical</h5>
-                  <p>Sabores refrescantes com frutas da estação</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-card" data-category="chope">
-              <div class="gallery-img-box">
-                <img src="assets/img/bar-chope-1.jpg" alt="Chope Trincando Na Areia Bar" class="gallery-img" onerror="this.classList.add('img-fallback-bar')">
-                <div class="gallery-overlay">
-                  <span class="gallery-category"><i class="fa-solid fa-beer-mug-empty"></i> Chope Gelado</span>
-                  <h5>Chope Trincando</h5>
-                  <p>Servido na caneca congelada</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-card" data-category="pratos">
-              <div class="gallery-img-box">
-                <img src="assets/img/bar-food-1.jpg" alt="Porção Gourmet Na Areia Bar" class="gallery-img" onerror="this.classList.add('img-fallback-bar')">
-                <div class="gallery-overlay">
-                  <span class="gallery-category"><i class="fa-solid fa-utensils"></i> Petiscos</span>
-                  <h5>Porção Gourmet Pé na Areia</h5>
-                  <p>Petiscos artesanais para compartilhar</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-card" data-category="vibe">
-              <div class="gallery-img-box">
-                <img src="assets/img/bar-lounge-1.jpg" alt="Ambiente Na Areia Bar Lounge" class="gallery-img" onerror="this.classList.add('img-fallback-bar')">
-                <div class="gallery-overlay">
-                  <span class="gallery-category"><i class="fa-solid fa-umbrella-beach"></i> Lounge</span>
-                  <h5>Vibe Beach Club</h5>
-                  <p>Conforto e descontração pé na areia</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          
 
           <div class="bar-cta-center">
-            <button class="btn btn-sand btn-large" onclick="openMenuModal()">
-              <i class="fa-solid fa-book-open"></i> Ver Destaques do Cardápio Digital
-            </button>
             <a href="https://instagram.com/_naareiabar" target="_blank" rel="noopener" class="btn btn-outline-light btn-large">
               <i class="fa-brands fa-instagram"></i> Siga @_naareiabar no Instagram
             </a>

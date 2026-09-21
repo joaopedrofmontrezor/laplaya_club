@@ -8,7 +8,7 @@ export function renderEvents() {
       <div class="container">
         <div class="section-header text-center">
           <span class="section-tag"><i class="fa-solid fa-calendar-star"></i> EXPERIÊNCIA COMPLETA</span>
-          <h2 class="section-title">Programação, Sunsets & Eventos</h2>
+          <h2 class="section-title">Programação & Eventos</h2>
           <p class="section-subtitle">
             Sempre há um ótimo motivo para reunir os amigos no La Playa Club & Na Areia Bar.
           </p>
@@ -17,7 +17,7 @@ export function renderEvents() {
         <div class="events-grid">
           <div class="events-main-card">
             <div class="events-card-header">
-              <h3><i class="fa-solid fa-fire"></i> Programação & Sunsets da Semana</h3>
+              <h3><i class="fa-solid fa-fire"></i> Programação & Eventos da Semana</h3>
               <span class="badge-accent">Atualizado no Instagram</span>
             </div>
 
