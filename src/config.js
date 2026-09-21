@@ -6,7 +6,7 @@ export const CONFIG = {
   // Configuração Principal do WhatsApp da Recepção
   // Substitua pelo número real com código do país (55) + DDD (16) + número
   // Exemplo: '5516997000000'
-  WHATSAPP_PHONE: '5516997000000',
+  WHATSAPP_PHONE: '5516999641866',
 
   // Redes Sociais Oficiais
   INSTAGRAM_CLUB: 'https://instagram.com/laplaya_club',

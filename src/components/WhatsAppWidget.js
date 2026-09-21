@@ -3,8 +3,44 @@
    ========================================================================== */
 import { CONFIG } from '../config.js';
 
+export function renderWhatsAppWidget() {
+  return `
+    <div class="whatsapp-floating-wrapper" id="whatsapp-floating">
+      <div class="whatsapp-popover" id="whatsapp-popover">
+        <div class="popover-header">
+          <div class="popover-avatar">
+            <i class="fa-solid fa-umbrella-beach"></i>
+          </div>
+          <div class="popover-info">
+            <strong>La Playa Club Recepção</strong>
+            <small><span class="online-dot"></span> Online agora</small>
+          </div>
+          <button class="popover-close" onclick="toggleWhatsAppPopover()">&times;</button>
+        </div>
+        <div class="popover-body">
+          <p>Olá! 👋 Como podemos te ajudar hoje pé na areia?</p>
+          <div class="popover-options">
+            <button onclick="selectWhatsAppOption('Aula Futevôlei')">⚽ Agendar Aula de Futevôlei</button>
+            <button onclick="selectWhatsAppOption('Locação de Quadra')">⏳ Reservar Horário / Day Use</button>
+            <button onclick="selectWhatsAppOption('Reserva no Bar')">🍹 Reservar Mesa / Na Areia Bar</button>
+            <button onclick="selectWhatsAppOption('Evento Privado')">🎂 Eventos e Festas Privadas</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="whatsapp-btn" onclick="toggleWhatsAppPopover()" aria-label="Contato via WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-ping"></span>
+      </button>
+    </div>
+
+    <button class="back-to-top" id="back-to-top" onclick="scrollToTop()" aria-label="Voltar ao Topo">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  `;
+}
+
 export function initWhatsAppWidget() {
-  // Global Reservation Modal Helper
   window.openReservationModal = function(sportName = 'Geral') {
     const modal = document.getElementById('modal-reservation');
     const selectSport = document.getElementById('res-sport');
@@ -32,7 +68,6 @@ export function initWhatsAppWidget() {
     document.body.style.overflow = 'hidden';
   };
 
-  // Global Digital Menu Modal Helper
   window.openMenuModal = function() {
     const modal = document.getElementById('modal-menu');
     if (modal) {
@@ -41,7 +76,6 @@ export function initWhatsAppWidget() {
     }
   };
 
-  // Global Events Modal Helper
   window.openEventModal = function() {
     const modal = document.getElementById('modal-events');
     if (modal) {
@@ -50,7 +84,6 @@ export function initWhatsAppWidget() {
     }
   };
 
-  // Global Close Modal Helper
   window.closeModal = function(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
@@ -59,7 +92,6 @@ export function initWhatsAppWidget() {
     }
   };
 
-  // Backdrop click handler
   document.querySelectorAll('.modal-backdrop').forEach(backdrop => {
     backdrop.addEventListener('click', (e) => {
       if (e.target === backdrop) {
@@ -69,7 +101,6 @@ export function initWhatsAppWidget() {
     });
   });
 
-  // Reservation Form Submit Handler
   window.submitReservationForm = function(event) {
     event.preventDefault();
 
@@ -91,7 +122,6 @@ export function initWhatsAppWidget() {
     closeModal('modal-reservation');
   };
 
-  // Private Events Form Submit Handler
   window.submitEventsForm = function(event) {
     event.preventDefault();
 
@@ -111,7 +141,6 @@ export function initWhatsAppWidget() {
     closeModal('modal-events');
   };
 
-  // Floating Popover Toggle & Options
   window.toggleWhatsAppPopover = function() {
     const popover = document.getElementById('whatsapp-popover');
     if (popover) {
