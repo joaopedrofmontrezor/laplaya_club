@@ -1,0 +1,491 @@
+/* ==========================================================================
+   REUSABLE UI COMPONENTS
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. BUTTONS & BADGES
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.75rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  letter-spacing: 0.3px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy-dark) 100%);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--navy-dark) 0%, #061120 100%);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-solar {
+  background: linear-gradient(135deg, var(--sunset-coral) 0%, var(--sunset-orange) 100%);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-coral);
+}
+
+.btn-solar:hover {
+  background: linear-gradient(135deg, var(--sunset-coral-hover) 0%, var(--sunset-coral) 100%);
+  box-shadow: 0 12px 28px rgba(255, 107, 74, 0.5);
+}
+
+.btn-sand {
+  background: linear-gradient(135deg, var(--sand-gold) 0%, var(--sand-dark) 100%);
+  color: var(--navy-dark);
+  font-weight: 800;
+}
+
+.btn-sand:hover {
+  background: linear-gradient(135deg, var(--sand-light) 0%, var(--sand-gold) 100%);
+  box-shadow: 0 10px 25px rgba(230, 194, 128, 0.4);
+}
+
+.btn-outline-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.btn-outline-glass:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: #FFFFFF;
+}
+
+.btn-outline-light {
+  background: transparent;
+  color: #FFFFFF;
+  border: 1px solid var(--border-glass);
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #FFFFFF;
+}
+
+.btn-large {
+  padding: 1.1rem 2.25rem;
+  font-size: 1.05rem;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. FLOATING WHATSAPP & BACK TO TOP WIDGETS
+   -------------------------------------------------------------------------- */
+.whatsapp-floating-wrapper {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1500;
+}
+
+.whatsapp-btn {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background-color: var(--whatsapp-green);
+  color: #FFFFFF;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+  position: relative;
+  transition: transform var(--transition-fast);
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.08);
+  background-color: var(--whatsapp-hover);
+}
+
+.whatsapp-ping {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--whatsapp-green);
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.whatsapp-popover {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  width: 320px;
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  display: none;
+  animation: popoverUp 0.3s ease forwards;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-popover.active {
+  display: block;
+}
+
+@keyframes popoverUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.popover-header {
+  background: var(--navy-dark);
+  color: #FFFFFF;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.popover-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--sand-gold);
+  color: var(--navy-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.popover-info strong {
+  display: block;
+  font-size: 0.9rem;
+  font-family: var(--font-heading);
+}
+
+.popover-info small {
+  font-size: 0.75rem;
+  color: var(--sand-gold);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.online-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--whatsapp-green);
+  border-radius: 50%;
+}
+
+.popover-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+}
+
+.popover-body {
+  padding: 1.25rem;
+  background: #F0F4F8;
+}
+
+.popover-body p {
+  font-size: 0.88rem;
+  color: var(--navy-dark);
+  background: #FFFFFF;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.popover-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.popover-options button {
+  text-align: left;
+  padding: 0.65rem 0.9rem;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy-dark);
+  transition: all var(--transition-fast);
+}
+
+.popover-options button:hover {
+  background: var(--navy-dark);
+  color: var(--sand-gold);
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--navy-dark);
+  color: var(--sand-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-fast);
+  z-index: 1000;
+  border: 1px solid var(--border-light);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background: var(--sunset-coral);
+  color: #FFFFFF;
+  transform: translateY(-3px);
+}
+
+
+/* --------------------------------------------------------------------------
+   3. MODALS SYSTEM
+   -------------------------------------------------------------------------- */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-fast);
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-container {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+  transform: scale(0.92);
+  transition: transform var(--transition-fast);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-container.modal-large {
+  max-width: 780px;
+}
+
+.modal-backdrop.active .modal-container {
+  transform: scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: var(--text-muted);
+  line-height: 1;
+  transition: color var(--transition-fast);
+}
+
+.modal-close:hover {
+  color: var(--navy-dark);
+}
+
+.modal-header {
+  margin-bottom: 1.75rem;
+}
+
+.modal-icon-badge {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.12);
+  color: var(--whatsapp-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 1rem;
+}
+
+.modal-tag {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--sunset-coral);
+  letter-spacing: 1px;
+}
+
+.modal-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--navy-dark);
+  margin-bottom: 0.5rem;
+}
+
+.modal-header p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--navy-dark);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  color: var(--navy-dark);
+  background: var(--bg-light);
+  transition: all var(--transition-fast);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--sunset-coral);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 4px rgba(255, 107, 74, 0.15);
+}
+
+/* Menu Modal Tabs */
+.menu-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding-bottom: 0.75rem;
+  overflow-x: auto;
+}
+
+.menu-tab-btn {
+  padding: 0.6rem 1.2rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: var(--radius-full);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.menu-tab-btn.active {
+  background: var(--navy-dark);
+  color: var(--sand-gold);
+}
+
+.menu-pane {
+  display: none;
+}
+
+.menu-pane.active {
+  display: block;
+}
+
+.menu-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.menu-item-card {
+  background: var(--bg-light);
+  padding: 1.1rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.menu-item-info h5 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--navy-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+}
+
+.badge-star {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  background: rgba(255, 107, 74, 0.15);
+  color: var(--sunset-coral);
+  border-radius: var(--radius-sm);
+}
+
+.menu-item-info p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}

@@ -1,0 +1,51 @@
+/* ==========================================================================
+   DESIGN TOKENS & CSS CUSTOM PROPERTIES
+   ========================================================================== */
+:root {
+  /* Brand Palette */
+  --navy-dark: #0A192F;
+  --navy-base: #112240;
+  --navy-card: #1B2B48;
+  --navy-light: #233554;
+  
+  --sand-gold: #E6C280;
+  --sand-light: #F7E7CE;
+  --sand-dark: #C49746;
+  
+  --sunset-coral: #FF6B4A;
+  --sunset-coral-hover: #E0533C;
+  --sunset-orange: #FF8A50;
+  --sunset-gold: #FFC107;
+  
+  --bg-light: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --text-dark: #0F172A;
+  --text-muted: #64748B;
+  --text-light: #F1F5F9;
+  
+  /* Status & Accents */
+  --whatsapp-green: #25D366;
+  --whatsapp-hover: #1EBE5A;
+  --border-glass: rgba(255, 255, 255, 0.15);
+  --border-light: rgba(226, 182, 89, 0.25);
+  
+  /* Typography */
+  --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* Elevations & Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 30px rgba(10, 25, 47, 0.12);
+  --shadow-lg: 0 20px 40px rgba(10, 25, 47, 0.22);
+  --shadow-coral: 0 10px 25px rgba(255, 107, 74, 0.35);
+
+  /* Border Radii */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
