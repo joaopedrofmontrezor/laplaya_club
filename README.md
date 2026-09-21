@@ -22,7 +22,7 @@
 
 ## 📌 Contexto de Negócio & O Desafio
 
-O **La Playa Club & Na Areia Bar** é um complexo esportivo e gastronômico premium em Matão/SP que combina 4 quadras profissionais de areia tratada, centro de treinamento com aulas exclusivas de Futevôlei (do iniciante ao avançado), locação avulsa e Day Use para Beach Tennis e Vôlei de Praia, além do gastrobar **Na Areia Bar** com coquetelaria autoral, chope trincando de gelado, sunsets com música ao vivo e porções artesanais.
+O **La Playa Club & Na Areia Bar** é um complexo esportivo e gastronômico premium em Matão/SP que combina 4 quadras profissionais de areia tratada, centro de treinamento com aulas exclusivas de Futevôlei (do iniciante ao avançado), locação avulsa e Day Use para Beach Tennis e Vôlei de Praia, além do gastrobar **Na Areia Bar** em anexo a Arena.
 
 ### O Problema do Cliente
 A arena necessitava de uma plataforma digital que:
@@ -31,7 +31,7 @@ A arena necessitava de uma plataforma digital que:
 3. **Oferecesse uma experiência mobile impecável**, já que mais de 85% do tráfego do público de esportes, lazer e gastronomia acessa pelo celular.
 
 ### A Solução Entregue
-Uma landing page comercial de alta conversão, extremamente veloz, com triagem inteligente de agendamentos no WhatsApp da recepção (`+55 16 99964-1866`), cardápio digital interativo em modal, hub dinâmico de eventos conectado às redes sociais oficiais (`@laplaya_club` e `@_naareiabar`) e SEO local otimizado.
+Uma landing page comercial de alta conversão, extremamente veloz, com triagem inteligente de agendamentos no WhatsApp da recepção e hub dinâmico de eventos conectado às redes sociais oficiais (`@laplaya_club` e `@_naareiabar`) e SEO local otimizado.
 
 ---
 
@@ -40,7 +40,7 @@ Uma landing page comercial de alta conversão, extremamente veloz, com triagem i
 Para garantir que o produto final tivesse excelência técnica, extrema velocidade de carregamento e alta manutenibilidade, as seguintes escolhas arquiteturais foram adotadas:
 
 ### 1. Arquitetura Modular ES6 & SPA Leve (Zero Runtime Overhead)
-- **Motivação:** Em vez de frameworks pesados que adicionam dezenas de megabytes ao bundle e atrasam a renderização mobile, optou-se por uma arquitetura modular baseada em Vite e ES6 Modules (`src/components/`), mantendo o `index.html` com apenas 35 linhas de HTML semântico.
+- **Motivação:** Em vez de frameworks pesados que adicionam dezenas de megabytes ao bundle e atrasam a renderização mobile, optou-se por uma arquitetura modular baseada em Vite e ES6 Modules (`src/components/`).
 - **Impacto:** **Time to First Byte (TTFB)** inferior a 40ms, carregamento quase instantâneo na borda (Edge Vercel) e nota máxima nos Core Web Vitals do Google.
 
 ### 2. Design System com CSS Custom Properties & Glassmorphism
@@ -57,14 +57,13 @@ Para garantir que o produto final tivesse excelência técnica, extrema velocida
 - Utilização da pasta `/public/assets/img/` servida nativamente pelo CDN da Vercel. Logotipo oficial (`logo.png`) integrado no cabeçalho, favicon, marcas d'água das seções e rodapé com fallback gracioso em CSS/JS.
 
 ### 5. SEO Local Avançado & Configuração Comercial Centralizada
-- Injeção semântica de metadados para localização física em Matão - SP, coordenadas geográficas, horários de funcionamento da arena e do bar, dados empresariais (CNPJ `47.479.182/0001-99`) e configuração centralizada do WhatsApp em `src/config.js`.
+- Injeção semântica de metadados para localização física em Matão - SP, coordenadas geográficas, horários de funcionamento da arena e do bar, dados empresariais e configuração centralizada do WhatsApp em `src/config.js`.
 
 ---
 
 ## ⚡ Principais Funcionalidades da Aplicação
 
 - **Modal Inteligente de Agendamento (`BookingModal` / `Modals.js`):** Interface interativa que permite ao cliente selecionar o serviço desejado (Aulas de Futevôlei, Locação de Quadra de Beach Tennis/Vôlei, Day Use, Reserva no Bar), gerando uma mensagem pré-formatada e qualificada direto para a recepção no WhatsApp.
-- **Cardápio Digital em Modal (`Bar.js`):** Pop-up navegável com abas para Drinks Tropicais, Chopes Trincando e Porções Gourmet.
 - **Galeria Filtrável da Gastronomia (`Bar.js`):** Filtro interativo por categorias (Drinks Autorais, Chope & Cervejas, Porções Gourmet, Ambiente Bar) para visualização rápida da experiência.
 - **Hub de Agenda Conectado ao Instagram (`Events.js`):** Redirecionamento dinâmico para os perfis oficiais (`@laplaya_club` e `@_naareiabar`), eliminando a necessidade de manutenção manual de cronograma semanal.
 - **Formulário de Orçamento para Eventos Privados (`Modals.js`):** Captação de festas de aniversário, confraternizações corporativas e torneios fechados.
@@ -165,4 +164,4 @@ Projeto concebido, desenvolvido e entregue por:
 
 ## 📄 Licença & Propriedade
 
-Desenvolvido comercialmente para o **La Playa Club LTDA** (CNPJ: `47.479.182/0001-99`). Todos os direitos reservados.
+Desenvolvido comercialmente para o **La Playa Club LTDA**. Todos os direitos reservados.
